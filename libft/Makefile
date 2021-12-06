@@ -88,7 +88,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@printf "Compilation de la libft ✅\n"
+	@printf "\033[1mCompilation de \033[36mlibft\033[0m%-57s ✅\n"
 
 ./%.o: ./%.c
 	@gcc -Wall -Werror -Wextra -o $@ -c $< -g
