@@ -20,4 +20,7 @@ typedef struct  s_env{
     char        buf[2048];
 }               t_env;
 
+void ft_md5(char **av, t_env *env);
+void ft_sha256(char **av, t_env *env);
+
 #endif

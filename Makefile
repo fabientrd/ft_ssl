@@ -16,7 +16,9 @@ COLOR = echo
 
 CC_FLAGS = -Wall -Werror -Wextra -g 
 
-SRC = main.c
+SRC = 	main.c \
+		md5.c \
+		sha256.c\
 
 OBJ = $(addprefix $(OBJ_PATH), $(SRC:.c=.o))
 
