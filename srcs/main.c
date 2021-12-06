@@ -42,9 +42,10 @@ int		main(int ac, char **av){
 		return EXIT_FAILURE;
 	}
 	init_env(&env);
-	if ((env.bytes = read(STDIN_FILENO, env.buf, 2048)) > 1)
-		env.buf[env.bytes - 1] = '\0';
-	printf("Le echo envoie %s\n", env.buf);
+	// GERER LE READ POUR PRENDRE UN echo "..." | ./ft_ssl [command] [flags] [file/string] SANS ATTENDRE UNE ENTREE QUAND ON FAIT JUSTE ./ft_ssl [command] [flags] [file/string]
+	// if ((env.bytes = read(STDIN_FILENO, env.buf, 2048)) > 0)
+		// env.buf[env.bytes - 1] = '\0';
+	// printf("Le echo envoie %s\n", env.buf);
 	if (check_cmd(av, &env)){
 		printf("\nCommands:\nmd5\nsha256\n\nFlags:\n-p -q -r -s\n");
 		return (EXIT_FAILURE);
